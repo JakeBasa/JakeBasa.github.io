@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Loveee</title>
+</head>
+<body>
+  <div>
+    <h1>Will you be my Valentine?</h1>
+    
+  </div>
+  <div>
+    <button id="yesButton">Yes</button>
+    <button id="noButton">No</button>
+  </div>
+  <style>
+    body {
+      background-color: #ffffff; /* light pink */
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      height: 85vh;
+    }
+
+    div h1 {
+      text-align: center;
+      padding: 1rem;
+      border-radius: 10px;
+      
+      
+    }
+
+    h1 {
+      font-size: 2rem;
+      margin-bottom: 1rem;
+      margin-right: 1rem;
+      font-family: cursive;
+    }
+
+    button {
+      padding:.5rem;
+      border: none;
+      border-radius: 5px;
+      font-size: 1.5rem;
+      cursor: pointer;
+      margin: 1rem;
+      font-family: cursive;
+    }
+
+    #yesButton {
+      background-color: #228B22; /* forest green */
+      color: white;
+    }
+
+    #noButton {
+      position: absolute;
+      background-color: #DC143C; /* crimson */
+      color: white;
+    }
+  </style>
+  <script>
+    document.getElementById("yesButton").addEventListener("click", function(){
+      window.location.assign("next.html");
+    });
+    var x = document.getElementById("noButton")
+    x.addEventListener("click",change);
+    function change(){
+      var a = Math.floor(Math.random()*1000)+1;
+      var z = Math.floor(Math.random()*700)+1;
+      x.style.left = a+"px";
+      x.style.top = z+"px";
+
+    }
+  </script>
+</body>
+</html>
